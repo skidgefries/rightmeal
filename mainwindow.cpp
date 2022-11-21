@@ -13,3 +13,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_commandLinkButton_2_clicked()
+{
+    hide();
+    signupobj=new signup(this);
+    signupobj->show();
+}
+

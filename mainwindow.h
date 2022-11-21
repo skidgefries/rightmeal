@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include "SignUp.h"
 
 #include <QMainWindow>
 
@@ -15,7 +16,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_commandLinkButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
+    signup *signupobj;
 };
 #endif // MAINWINDOW_H
