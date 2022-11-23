@@ -17,6 +17,10 @@ public:
 private slots:
 
 
+    void on_commandLinkButton_4_clicked();
+
+    void on_commandLinkButton_14_clicked();
+
 private:
     Ui::caloriecalculator *ui;
 };

@@ -1,7 +1,6 @@
 #include "dietplan.h"
 #include "ui_dietplan.h"
 
-
 dietplan::dietplan(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::dietplan)
