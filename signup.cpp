@@ -20,4 +20,3 @@ void signup::on_pushButton_clicked()
     basicinfoobj -> show();
 }
 
-//dfgh
