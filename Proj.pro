@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     basicinfo.cpp \
+    bmi.cpp \
     caloriecalculator.cpp \
     dietplan.cpp \
     main.cpp \
@@ -19,6 +20,7 @@ SOURCES += \
 
 HEADERS += \
     basicinfo.h \
+    bmi.h \
     caloriecalculator.h \
     dietplan.h \
     mainwindow.h \
@@ -27,6 +29,7 @@ HEADERS += \
 
 FORMS += \
     basicinfo.ui \
+    bmi.ui \
     caloriecalculator.ui \
     dietplan.ui \
     mainwindow.ui \
