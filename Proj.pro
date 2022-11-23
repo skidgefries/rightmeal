@@ -16,7 +16,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     myprofile.cpp \
-    signup.cpp
+    signup.cpp \
+    workout.cpp
 
 HEADERS += \
     basicinfo.h \
@@ -25,7 +26,8 @@ HEADERS += \
     dietplan.h \
     mainwindow.h \
     myprofile.h \
-    signup.h
+    signup.h \
+    workout.h
 
 FORMS += \
     basicinfo.ui \
@@ -34,7 +36,8 @@ FORMS += \
     dietplan.ui \
     mainwindow.ui \
     myprofile.ui \
-    signup.ui
+    signup.ui \
+    workout.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

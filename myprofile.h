@@ -3,6 +3,7 @@
 #include "dietplan.h"
 #include "bmi.h"
 #include <QDialog>
+#include "workout.h"
 
 namespace Ui {
 class myprofile;
@@ -21,10 +22,13 @@ private slots:
 
     void on_commandLinkButton_11_clicked();
 
+    void on_commandLinkButton_10_clicked();
+
 private:
     Ui::myprofile *ui;
     dietplan *dietplanobj;
     bmi *bmiobj;
+    workout *workoutobj;
 };
 
 #endif // MYPROFILE_H

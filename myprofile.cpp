@@ -28,3 +28,11 @@ void myprofile::on_commandLinkButton_11_clicked()
     bmiobj->show();
 }
 
+
+void myprofile::on_commandLinkButton_10_clicked()
+{
+    hide();
+    workoutobj = new workout(this);
+    workoutobj->show();
+}
+
