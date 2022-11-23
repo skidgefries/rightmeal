@@ -14,7 +14,9 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_commandLinkButton_2_clicked()
+
+
+void MainWindow::on_pushButton_9_clicked()
 {
     hide();
     signupobj=new signup(this);
