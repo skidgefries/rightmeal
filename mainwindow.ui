@@ -80,6 +80,13 @@ QLineEdit {font: #161514;}
          <height>16777215</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="placeholderText">
         <string>Email</string>
        </property>
@@ -98,6 +105,13 @@ QLineEdit {font: #161514;}
          <width>400</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
        </property>
        <property name="placeholderText">
         <string>Password</string>
@@ -118,6 +132,11 @@ QLineEdit {font: #161514;}
          <height>16777215</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
+       </property>
        <property name="text">
         <string>Login</string>
        </property>
@@ -136,6 +155,11 @@ QLineEdit {font: #161514;}
          <width>200</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
        </property>
        <property name="text">
         <string>Forgot Password</string>
@@ -221,6 +245,11 @@ QLineEdit {font: #161514;}
          <width>100</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+        </font>
        </property>
        <property name="text">
         <string>Sign Up</string>
