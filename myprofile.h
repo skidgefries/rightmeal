@@ -1,7 +1,7 @@
 #ifndef MYPROFILE_H
 #define MYPROFILE_H
 #include "dietplan.h"
-
+#include "bmi.h"
 #include <QDialog>
 
 namespace Ui {
@@ -19,10 +19,12 @@ public:
 private slots:
     void on_commandLinkButton_9_clicked();
 
+    void on_commandLinkButton_11_clicked();
+
 private:
     Ui::myprofile *ui;
     dietplan *dietplanobj;
-
+    bmi *bmiobj;
 };
 
 #endif // MYPROFILE_H

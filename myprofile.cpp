@@ -18,5 +18,13 @@ void myprofile::on_commandLinkButton_9_clicked()
     hide();
     dietplanobj=new dietplan(this);
     dietplanobj->show();
+};
+
+
+void myprofile::on_commandLinkButton_11_clicked()
+{
+    hide();
+    bmiobj=new bmi(this);
+    bmiobj->show();
 }
 
