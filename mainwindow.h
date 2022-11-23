@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "signup.h"
+#include "myprofile.h"
+
 
 #include <QMainWindow>
 
@@ -20,8 +22,11 @@ private slots:
 
     void on_pushButton_9_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     signup *signupobj;
+    myprofile *myprofileobj;
 };
 #endif // MAINWINDOW_H

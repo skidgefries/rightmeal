@@ -1,5 +1,7 @@
 #include "myprofile.h"
 #include "ui_myprofile.h"
+#include "mainwindow.h"
+MainWindow *mainwindowobj;
 
 myprofile::myprofile(QWidget *parent) :
     QDialog(parent),
@@ -34,5 +36,21 @@ void myprofile::on_commandLinkButton_10_clicked()
     hide();
     workoutobj = new workout(this);
     workoutobj->show();
+}
+
+
+void myprofile::on_commandLinkButton_14_clicked()
+{
+    hide();
+    mainwindowobj= new MainWindow(this);
+    mainwindowobj->show();
+}
+
+
+void myprofile::on_commandLinkButton_12_clicked()
+{
+    hide();
+    bodyfatobj=new BodyFAT(this);
+    bodyfatobj->show();
 }
 

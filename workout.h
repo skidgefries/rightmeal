@@ -15,6 +15,17 @@ public:
     workout(QWidget *parent = nullptr);
     ~workout();
 
+private slots:
+    void on_commandLinkButton_14_clicked();
+
+    void on_commandLinkButton_4_clicked();
+
+    void on_commandLinkButton_9_clicked();
+
+    void on_commandLinkButton_11_clicked();
+
+    void on_commandLinkButton_12_clicked();
+
 private:
     Ui::workout *ui;
 };

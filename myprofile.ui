@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>840</width>
-    <height>690</height>
+    <width>1000</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -112,7 +112,7 @@ QLineEdit {font: #161514;}
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="icons.qrc">:/img/C:/Users/Dell/Downloads/image0.jpeg</pixmap>
+            <pixmap>:/img/C:/Users/Dell/Downloads/image0.jpeg</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -1336,6 +1336,9 @@ QLineEdit {background: #ffffff;}
                 <pointsize>12</pointsize>
                </font>
               </property>
+              <property name="styleSheet">
+               <string notr="true">background: #cc7f63;</string>
+              </property>
               <property name="text">
                <string>Edit</string>
               </property>
@@ -1352,8 +1355,6 @@ QLineEdit {background: #ffffff;}
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="icons.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

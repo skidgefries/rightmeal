@@ -18,6 +18,16 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_commandLinkButton_26_clicked();
+
+    void on_commandLinkButton_6_clicked();
+
+    void on_commandLinkButton_22_clicked();
+
+    void on_commandLinkButton_23_clicked();
+
+    void on_commandLinkButton_24_clicked();
+
 private:
     Ui::dietplan *ui;
     caloriecalculator *caloriecalculatorobj;

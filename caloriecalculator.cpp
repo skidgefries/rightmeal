@@ -3,7 +3,7 @@
 #include "mainwindow.h"
 #include "myprofile.h"
 myprofile *myprofileobj;
-MainWindow *mainwindowobj;
+MainWindow *mainwindowobj1;
 
 caloriecalculator::caloriecalculator(QWidget *parent) :
     QDialog(parent),
@@ -31,7 +31,7 @@ void caloriecalculator::on_commandLinkButton_4_clicked()
 void caloriecalculator::on_commandLinkButton_14_clicked()
 {
     hide();
-    mainwindowobj=new MainWindow(this);
-    mainwindowobj->show();
+    mainwindowobj1=new MainWindow(this);
+    mainwindowobj1->show();
 }
 

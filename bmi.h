@@ -15,6 +15,17 @@ public:
     explicit bmi(QWidget *parent = nullptr);
     ~bmi();
 
+private slots:
+    void on_commandLinkButton_26_clicked();
+
+    void on_commandLinkButton_6_clicked();
+
+    void on_commandLinkButton_21_clicked();
+
+    void on_commandLinkButton_22_clicked();
+
+    void on_commandLinkButton_24_clicked();
+
 private:
     Ui::bmi *ui;
 };

@@ -23,3 +23,12 @@ void MainWindow::on_pushButton_9_clicked()
     signupobj->show();
 }
 
+
+void MainWindow::on_pushButton_clicked()
+{
+    hide();
+    myprofileobj=new myprofile(this);
+    myprofileobj->show();
+
+}
+
