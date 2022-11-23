@@ -101,22 +101,42 @@ QLineEdit {font: #161514;}
           <number>0</number>
          </property>
          <item>
-          <widget class="QLabel" name="label_pix">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>220</height>
-            </size>
+          <widget class="QFrame" name="frame_13">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
            </property>
-           <property name="text">
-            <string/>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
            </property>
-           <property name="pixmap">
-            <pixmap>:/img/C:/Users/Dell/Downloads/image0.jpeg</pixmap>
-           </property>
-           <property name="scaledContents">
-            <bool>true</bool>
-           </property>
+           <widget class="QFrame" name="frame_32">
+            <property name="geometry">
+             <rect>
+              <x>-1</x>
+              <y>0</y>
+              <width>251</width>
+              <height>201</height>
+             </rect>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="pics">
+             <property name="geometry">
+              <rect>
+               <x>-8</x>
+               <y>0</y>
+               <width>261</width>
+               <height>201</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>TextLabel</string>
+             </property>
+            </widget>
+           </widget>
           </widget>
          </item>
         </layout>

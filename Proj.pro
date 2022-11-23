@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    basic.cpp \
     basicinfo.cpp \
     bmi.cpp \
     bodyfat.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
     workout.cpp
 
 HEADERS += \
+    basic.h \
     basicinfo.h \
     bmi.h \
     bodyfat.h \
@@ -32,6 +34,7 @@ HEADERS += \
     workout.h
 
 FORMS += \
+    basic.ui \
     basicinfo.ui \
     bmi.ui \
     bodyfat.ui \
@@ -48,4 +51,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    icons.qrc
+    icons.qrc \
+    image.qrc

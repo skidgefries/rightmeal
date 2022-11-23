@@ -2,12 +2,16 @@
 #include "ui_myprofile.h"
 #include "mainwindow.h"
 MainWindow *mainwindowobj;
+#include <Qpixmap>
+
 
 myprofile::myprofile(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::myprofile)
 {
     ui->setupUi(this);
+    QPixmap pix("D:/RightMeal/log/logo.png");
+    ui->pics->setPixmap(pix.scaled(261,201,Qt::KeepAspectRatio));
 }
 
 myprofile::~myprofile()

@@ -1,6 +1,7 @@
 #ifndef BASICINFO_H
 #define BASICINFO_H
 #include "myprofile.h"
+#include "basic.h"
 #include <QDialog>
 
 namespace Ui {
@@ -18,9 +19,12 @@ public:
 private slots:
     void on_pushButton_3_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::basicinfo *ui;
     myprofile *myprofileobj;
+    basic *basicobj;
 };
 
 #endif // BASICINFO_H

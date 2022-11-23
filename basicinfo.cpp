@@ -20,3 +20,11 @@ void basicinfo::on_pushButton_3_clicked()
     myprofileobj->show();
 }
 
+
+void basicinfo::on_pushButton_clicked()
+{
+    hide();
+    basicobj=new basic(this);
+    basicobj->show();
+}
+
