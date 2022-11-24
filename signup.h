@@ -2,6 +2,10 @@
 #define SIGNUP_H
 #include "basicinfo.h"
 #include <QDialog>
+#include<QtSql>
+#include<QSqlDatabase>
+#include<QAbstractButton>
+
 
 namespace Ui {
 class signup;
@@ -18,9 +22,12 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_commandLinkButton_clicked();
+
 private:
     Ui::signup *ui;
     basicinfo *basicinfoobj;
+    QSqlDatabase db1;
 };
 
 #endif // SIGNUP_H

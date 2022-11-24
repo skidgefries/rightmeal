@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>479</width>
+    <width>456</width>
     <height>501</height>
    </rect>
   </property>
@@ -88,7 +88,7 @@ QLineEdit {font: #161514;}
         </font>
        </property>
        <property name="placeholderText">
-        <string>Email</string>
+        <string>Username</string>
        </property>
       </widget>
      </item>
@@ -112,6 +112,9 @@ QLineEdit {font: #161514;}
          <italic>false</italic>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Password</string>
@@ -343,7 +346,7 @@ QLineEdit {font: #161514;}
            <string/>
           </property>
           <property name="pixmap">
-           <pixmap>:/img/image0.jpeg</pixmap>
+           <pixmap>C:/Users/Dell/Downloads/image0.png</pixmap>
           </property>
           <property name="scaledContents">
            <bool>true</bool>
@@ -353,7 +356,7 @@ QLineEdit {font: #161514;}
        </layout>
       </widget>
      </item>
-     <item>
+     <item alignment="Qt::AlignVCenter">
       <widget class="QFrame" name="frame_9">
        <property name="minimumSize">
         <size>
@@ -389,13 +392,19 @@ QLineEdit {font: #161514;}
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <item>
+        <item alignment="Qt::AlignBottom">
          <widget class="QLabel" name="label">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
           </property>
           <property name="maximumSize">
            <size>
@@ -419,7 +428,7 @@ QLineEdit {font: #161514;}
           </property>
          </widget>
         </item>
-        <item>
+        <item alignment="Qt::AlignBottom">
          <widget class="QLabel" name="lbbl">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
