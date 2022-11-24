@@ -2,7 +2,7 @@
 #include "ui_myprofile.h"
 #include "mainwindow.h"
 MainWindow *mainwindowobj;
-#include <Qpixmap>
+#include <QPixmap>
 
 
 myprofile::myprofile(QWidget *parent) :
@@ -10,7 +10,7 @@ myprofile::myprofile(QWidget *parent) :
     ui(new Ui::myprofile)
 {
     ui->setupUi(this);
-    QPixmap pix("D:/RightMeal/log/logo.png");
+    QPixmap pix("Desktop/gittt/rightmeal/logo.png");
     ui->pics->setPixmap(pix.scaled(261,201,Qt::KeepAspectRatio));
 }
 
