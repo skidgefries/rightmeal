@@ -3,6 +3,8 @@
 #include "myprofile.h"
 #include "basic.h"
 #include <QDialog>
+#include<QtSql>
+#include<QSqlDatabase>
 
 namespace Ui {
 class basicinfo;
@@ -25,6 +27,7 @@ private:
     Ui::basicinfo *ui;
     myprofile *myprofileobj;
     basic *basicobj;
+    QSqlDatabase db4;
 };
 
 #endif // BASICINFO_H

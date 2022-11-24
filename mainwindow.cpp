@@ -35,36 +35,36 @@ void MainWindow::on_pushButton_clicked()
 {
     if(db2.open())
     {
-      QString username=ui->lineEdit_5->text();
-      QString password=ui->lineEdit_6->text();
-      QSqlQuery qry;
-      qry.prepare(QString("SELECT * FROM signup WHERE username=:username AND password=:password"));
-         qry.bindValue(":username", username);
-         qry.bindValue(":password", password);
+        QString username=ui->lineEdit_5->text();
+        QString password=ui->lineEdit_6->text();
+        QSqlQuery qry;
+        qry.prepare(QString("SELECT * FROM signup WHERE username=:username AND password=:password"));
+        qry.bindValue(":username",username);
+        qry.bindValue(":password",password);
         if(!qry.exec())
-         {
-              QMessageBox::information(this,"Log in","Log in failed. Try again.");
-         }
-         else
-         {
-             while(qry.next())
-                    {
-                        QString username=qry.value(0).toString();
-                        QString password=qry.value(1).toString();
-                        if(username==username && password==password)
-                        {
-                            usernameg=username;
-                            hide();
-                            myprofileobj=new myprofile(this);
-                            myprofileobj->show();
+        {
+            QMessageBox::information(this,"Login","Login failed. Try Again.");
+        }
+        else
+        {
+            while(qry.next())
+            {
+                QString username=qry.value(0).toString();
+                QString password=qry.value(1).toString();
+                if(username==username && password==password)
+                {
+                   usernameg=username;
+                   hide();
+                   myprofileobj=new myprofile(this);
+                   myprofileobj->show();
 
-                        }
-                        else
-                        {
-                            QMessageBox::warning(this,"Login","Username and password do not match.");
-                        }
-                    }
-         }
+                }
+                else
+                {
+                    QMessageBox::warning(this,"Login","Username and password do not match.");
+                }
+            }
+        }
     }
 }
 

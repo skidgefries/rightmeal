@@ -5,6 +5,9 @@
 #include <QDialog>
 #include "workout.h"
 #include "bodyfat.h"
+#include<QtSql>
+#include<QSqlDatabase>
+#include<QSqlQuery>
 
 
 namespace Ui {
@@ -36,6 +39,7 @@ private:
     bmi *bmiobj;
     workout *workoutobj;
     BodyFAT *bodyfatobj;
+    QSqlDatabase db3;
 };
 
 #endif // MYPROFILE_H

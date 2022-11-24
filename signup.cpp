@@ -4,7 +4,7 @@
 MainWindow *mainwindowobj7;
 
 #include <QMessageBox>
-
+QString usernames;
 signup::signup(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::signup)
@@ -53,23 +53,25 @@ void signup::on_pushButton_clicked()
 
           if(qry.exec())
           {
+              usernames=username;
                QMessageBox::information(this,"Sign Up","Signed up successfully.");
-                QSqlDatabase::removeDatabase("QMYSQL");
+               QSqlDatabase::removeDatabase("QMYSQL");
+                hide();
+                 basicinfoobj=new basicinfo(this);
+                 basicinfoobj -> show();
           }
           else
           {
               QMessageBox::warning(this,"Sign Up","Signed up failed.");
               qDebug() << qry.lastError().text()<<Qt::endl;
-               QSqlDatabase::removeDatabase("QMYSQL");
+              QSqlDatabase::removeDatabase("QMYSQL");
           }
         }
 
       }
      db1.close();
 
-  hide();
-   basicinfoobj=new basicinfo(this);
-   basicinfoobj -> show();
+
 
 }
 

@@ -10,8 +10,39 @@ myprofile::myprofile(QWidget *parent) :
     ui(new Ui::myprofile)
 {
     ui->setupUi(this);
-    QPixmap pix("D:/RightMeal/log/logo.png");
-    ui->pics->setPixmap(pix.scaled(261,201,Qt::KeepAspectRatio));
+    db3 = QSqlDatabase::addDatabase("QMYSQL");
+        db3.setHostName("127.0.0.1");
+        db3.setUserName("root");
+        db3.setPassword("0852");
+        db3.setDatabaseName("proj");
+    db3.open();
+    QSqlQuery qry(db3);
+    extern QString usernameg;
+    extern QString usernames;
+    QString username,dob,hfin, winkg,gender,bodyfat,diettype;
+    int age=20;
+    qry.prepare("SELECT username,Firstname,Midname,Lastname,email,dob, FROM signup WHERE username=:username");
+    qry.prepare("SELECT heightft,Heighin,Weight,Bodyfat,Activitylevel,Diettype FROM basicinfo WHERE username=:username");
+    qry.bindValue(":username",usernameg);
+    qry.exec();
+    qry.first();
+    username= qry.value(1).toString() ;
+    dob= qry.value(2).toString();
+    hfin= qry.value(3).toString();
+    winkg=qry.value(0).toString();
+    gender=qry.value(4).toString();
+    bodyfat=qry.value(5).toString();
+    diettype=qry.value(6).toString();
+
+    hfin=
+    ui->username->setText(username);
+    ui->age->setNum(age);
+    ui->height->setText(hfin);
+    ui->weight->setText(winkg);
+    ui->gender->setText(gender);
+    ui->bodyfat->setText(bodyfat);
+    ui->diet->setText(diettype);
+
 }
 
 myprofile::~myprofile()

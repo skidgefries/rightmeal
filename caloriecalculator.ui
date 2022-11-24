@@ -105,7 +105,7 @@ QLineEdit {font: #161514;}
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>C:/Users/Dell/Downloads/image0.png</pixmap>
+            <pixmap>../../../Downloads/image0.png</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -143,7 +143,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_4">
            <property name="font">
             <font>
-             <family>Times New Roman</family>
+             <family>Segoe UI</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -184,7 +184,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_9">
            <property name="font">
             <font>
-             <family>Times New Roman</family>
+             <family>Segoe UI</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -225,7 +225,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_10">
            <property name="font">
             <font>
-             <family>Times New Roman</family>
+             <family>Segoe UI</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -266,7 +266,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_11">
            <property name="font">
             <font>
-             <family>Times New Roman</family>
+             <family>Segoe UI</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -307,7 +307,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_12">
            <property name="font">
             <font>
-             <family>Times New Roman</family>
+             <family>Segoe UI</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -348,7 +348,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_13">
            <property name="font">
             <font>
-             <family>Times New Roman</family>
+             <family>Segoe UI</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -389,7 +389,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_14">
            <property name="font">
             <font>
-             <family>Times New Roman</family>
+             <family>Segoe UI</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -827,11 +827,15 @@ QLineEdit {font: #161514;}
               <layout class="QHBoxLayout" name="horizontalLayout_8">
                <item>
                 <widget class="QComboBox" name="comboBox">
-                 <item>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </item>
+                 <property name="styleSheet">
+                  <string notr="true">QMainWindow {background: #e0d3b6;}
+QWidget {background: #e0d3b6;}
+QFrame {background: #e0d3b6;}
+QCommandLinkButton  {background:#e0d3b6;}
+QLabel {background: #e0d3b6;}
+QLineEdit {font: #161514;}
+QLineEdit {background: #ffffff;}</string>
+                 </property>
                  <item>
                   <property name="text">
                    <string>Male</string>

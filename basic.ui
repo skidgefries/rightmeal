@@ -548,11 +548,6 @@ QLineEdit {font: #161514;}
                      </property>
                      <item>
                       <property name="text">
-                       <string/>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
                        <string>Male</string>
                       </property>
                      </item>
