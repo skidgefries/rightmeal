@@ -3,11 +3,18 @@
 #include "mainwindow.h"
 MainWindow *mainwindowobj7;
 
+#include <QMessageBox>
+
 signup::signup(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::signup)
 {
     ui->setupUi(this);
+    db1 = QSqlDatabase::addDatabase("QMYSQL");
+        db1.setHostName("127.0.0.1");
+        db1.setUserName("root");
+        db1.setPassword("0852");
+        db1.setDatabaseName("proj");
 }
 
 signup::~signup()
@@ -17,16 +24,69 @@ signup::~signup()
 
 void signup::on_pushButton_clicked()
 {
-    hide();
-    basicinfoobj=new basicinfo(this);
-    basicinfoobj -> show();
+  /*QSqlDatabase db1 = QSqlDatabase::addDatabase("QMYSQL");
+        db1.setHostName("127.0.0.1");
+        db1.setUserName("root");
+        db1.setPassword("0852");
+        db1.setDatabaseName("proj");*/
+
+     if(db1.open())
+     {
+       QString firstname = ui->lineEdit->text();
+       QString midname= ui-> lineEdit_17 ->text();
+       QString lastname=ui->lineEdit_18->text();
+       QString email=ui->lineEdit_2->text();
+       QString username=ui->lineEdit_3->text();
+       QString password=ui->lineEdit_4->text();
+       QString conpass=ui->lineEdit_5->text();
+       QString dob=ui->dateEdit->text();
+       //QCheckBox tandp=ui->checkBox->setCheckState()
+       if(password!=conpass)
+       {
+           QMessageBox::warning(this,"Error","Password doesn't match. Please try again.");
+       }
+       else
+        {
+            QSqlQuery qry;
+          qry.prepare("INSERT INTO signup (Firstname, Midname, Lastname, email, username, password, dob)""VALUES(:Firstname, :Midname, :Lastname, :email, :username, :password, :dob)");
+
+         // qry.prepare("UPDATE signup SET Firstname=:firstname,Midname=:midname,Lastname=:lastname,email=:email,username=:username,password=:password,confirmpass=:conpass,dob=:dob");
+          qry.bindValue(":Firstname", firstname);
+          qry.bindValue(":Midname", midname);
+          qry.bindValue(":Lastname", lastname);
+          qry.bindValue(":email", email);
+          qry.bindValue(":username", username);
+          qry.bindValue(":password", password);
+          //qry.bindValue(":confirmpass", conpass);
+          qry.bindValue(":dob", dob);
+
+          if(qry.exec())
+          {
+               QMessageBox::information(this,"Sign Up","Signed up successfully.");
+                QSqlDatabase::removeDatabase("QMYSQL");
+          }
+          else
+          {
+              QMessageBox::warning(this,"Sign Up","Signed up failed.");
+              qDebug() << qry.lastError().text()<<Qt::endl;
+               QSqlDatabase::removeDatabase("QMYSQL");
+          }
+        }
+
+      }
+     db1.close();
+
+  hide();
+   basicinfoobj=new basicinfo(this);
+   basicinfoobj -> show();
+
 }
 
 
 void signup::on_commandLinkButton_clicked()
 {
-    hide();
-    mainwindowobj7=new MainWindow(this);
-    mainwindowobj7->show();
+   hide();
+   mainwindowobj7=new MainWindow(this);
+   mainwindowobj7->show();
 }
 

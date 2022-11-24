@@ -646,7 +646,11 @@ QTextEdit {font: #161514;}
              <number>0</number>
             </property>
             <item>
-             <widget class="QLineEdit" name="lineEdit_4"/>
+             <widget class="QLineEdit" name="lineEdit_4">
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -676,7 +680,11 @@ QTextEdit {font: #161514;}
              <number>0</number>
             </property>
             <item>
-             <widget class="QLineEdit" name="lineEdit_5"/>
+             <widget class="QLineEdit" name="lineEdit_5">
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
             </item>
            </layout>
           </widget>
@@ -715,13 +723,19 @@ QTextEdit {font: #161514;}
               </property>
               <property name="dateTime">
                <datetime>
-                <hour>13</hour>
-                <minute>30</minute>
+                <hour>0</hour>
+                <minute>0</minute>
                 <second>0</second>
                 <year>2022</year>
                 <month>12</month>
                 <day>10</day>
                </datetime>
+              </property>
+              <property name="displayFormat">
+               <string>yyyy-MM-dd</string>
+              </property>
+              <property name="calendarPopup">
+               <bool>true</bool>
               </property>
              </widget>
             </item>

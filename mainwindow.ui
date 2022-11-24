@@ -88,7 +88,7 @@ QLineEdit {font: #161514;}
         </font>
        </property>
        <property name="placeholderText">
-        <string>Email</string>
+        <string>Username</string>
        </property>
       </widget>
      </item>
@@ -112,6 +112,9 @@ QLineEdit {font: #161514;}
          <italic>false</italic>
          <bold>false</bold>
         </font>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
         <string>Password</string>
