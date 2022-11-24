@@ -143,7 +143,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_4">
            <property name="font">
             <font>
-             <family>Segoe UI</family>
+             <family>Times New Roman</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -184,7 +184,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_9">
            <property name="font">
             <font>
-             <family>Segoe UI</family>
+             <family>Times New Roman</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -225,7 +225,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_10">
            <property name="font">
             <font>
-             <family>Segoe UI</family>
+             <family>Times New Roman</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -266,7 +266,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_11">
            <property name="font">
             <font>
-             <family>Segoe UI</family>
+             <family>Times New Roman</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -307,7 +307,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_12">
            <property name="font">
             <font>
-             <family>Segoe UI</family>
+             <family>Times New Roman</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -348,7 +348,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_13">
            <property name="font">
             <font>
-             <family>Segoe UI</family>
+             <family>Times New Roman</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -389,7 +389,7 @@ QLineEdit {font: #161514;}
           <widget class="QCommandLinkButton" name="commandLinkButton_14">
            <property name="font">
             <font>
-             <family>Segoe UI</family>
+             <family>Times New Roman</family>
              <pointsize>16</pointsize>
              <bold>false</bold>
             </font>
@@ -805,13 +805,18 @@ QLineEdit {font: #161514;}
             <property name="bottomMargin">
              <number>0</number>
             </property>
-            <item>
+            <item alignment="Qt::AlignLeft">
              <widget class="QFrame" name="frame_24">
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>250</width>
                 <height>0</height>
                </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+               </font>
               </property>
               <property name="frameShape">
                <enum>QFrame::StyledPanel</enum>
@@ -821,41 +826,27 @@ QLineEdit {font: #161514;}
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_8">
                <item>
-                <widget class="QRadioButton" name="radioButton_2">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Times New Roman</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Male</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="radioButton">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Times New Roman</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Female</string>
-                 </property>
+                <widget class="QComboBox" name="comboBox">
+                 <item>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Male</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Female</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Others</string>
+                  </property>
+                 </item>
                 </widget>
                </item>
               </layout>

@@ -503,8 +503,14 @@ QLineEdit {font: #161514;}
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
-                <item>
+                <item alignment="Qt::AlignLeft">
                  <widget class="QFrame" name="frame_37">
+                  <property name="minimumSize">
+                   <size>
+                    <width>250</width>
+                    <height>0</height>
+                   </size>
+                  </property>
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
                   </property>
@@ -528,39 +534,38 @@ QLineEdit {font: #161514;}
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QRadioButton" name="radioButton_3">
+                    <widget class="QComboBox" name="comboBox">
+                     <property name="maximumSize">
+                      <size>
+                       <width>250</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
                      <property name="font">
                       <font>
                        <family>Times New Roman</family>
                       </font>
                      </property>
-                     <property name="text">
-                      <string>Male</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="radioButton">
-                     <property name="font">
-                      <font>
-                       <family>Times New Roman</family>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>Female</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="radioButton_2">
-                     <property name="font">
-                      <font>
-                       <family>Times New Roman</family>
-                      </font>
-                     </property>
-                     <property name="text">
-                      <string>Others</string>
-                     </property>
+                     <item>
+                      <property name="text">
+                       <string/>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Male</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Female</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Others</string>
+                      </property>
+                     </item>
                     </widget>
                    </item>
                   </layout>
