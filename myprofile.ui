@@ -23,6 +23,12 @@ QCommandLinkButton {background: #e0d3b6;}</string>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="QFrame" name="frame">
+     <property name="minimumSize">
+      <size>
+       <width>260</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="maximumSize">
       <size>
        <width>250</width>
@@ -113,8 +119,8 @@ QLineEdit {font: #161514;}
              <rect>
               <x>-1</x>
               <y>0</y>
-              <width>251</width>
-              <height>201</height>
+              <width>87</width>
+              <height>44</height>
              </rect>
             </property>
             <property name="frameShape">
@@ -123,19 +129,35 @@ QLineEdit {font: #161514;}
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
-            <widget class="QLabel" name="pics">
-             <property name="geometry">
-              <rect>
-               <x>-8</x>
-               <y>0</y>
-               <width>261</width>
-               <height>201</height>
-              </rect>
-             </property>
-             <property name="text">
-              <string>TextLabel</string>
-             </property>
-            </widget>
+            <layout class="QVBoxLayout" name="verticalLayout_10"/>
+           </widget>
+           <widget class="QLabel" name="label_9">
+            <property name="geometry">
+             <rect>
+              <x>-10</x>
+              <y>-10</y>
+              <width>271</width>
+              <height>208</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>260</width>
+              <height>201</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="image.qrc">:/img/logo</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
            </widget>
           </widget>
          </item>
@@ -1375,6 +1397,8 @@ QLineEdit {background: #ffffff;}
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>
