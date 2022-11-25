@@ -4,7 +4,9 @@
 MainWindow *mainwindowobj7;
 
 #include <QMessageBox>
+
 QString usernames;
+
 signup::signup(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::signup)
@@ -53,8 +55,9 @@ void signup::on_pushButton_clicked()
 
           if(qry.exec())
           {
-              usernames=username;
+
                QMessageBox::information(this,"Sign Up","Signed up successfully.");
+               usernames=username;
                QSqlDatabase::removeDatabase("QMYSQL");
                 hide();
                  basicinfoobj=new basicinfo(this);

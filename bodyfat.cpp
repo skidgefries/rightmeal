@@ -21,6 +21,11 @@ BodyFAT::BodyFAT(QWidget *parent)
     , ui(new Ui::BodyFAT)
 {
     ui->setupUi(this);
+    dbbfc = QSqlDatabase::addDatabase("QMYSQL");
+        dbbfc.setHostName("127.0.0.1");
+        dbbfc.setUserName("root");
+        dbbfc.setPassword("0852");
+        dbbfc.setDatabaseName("proj");
 }
 
 BodyFAT::~BodyFAT()
@@ -66,5 +71,20 @@ void BodyFAT::on_commandLinkButton_23_clicked()
     hide();
     bmiobj5=new bmi(this);
     bmiobj5->show();
+}
+
+
+void BodyFAT::on_pushButton_clicked()
+{
+    dbbfc.open();
+    QString gender = ui->Gender->currentText();
+    QString age= ui-> age ->text();
+    QString hft=ui->lineEdit->text();
+    QString hin=ui->lineEdit_2->text();
+    QString wt=ui->lineEdit_3->text();
+    QString nm=ui->lineEdit_5->text();
+    QString hm=ui->lineEdit_6->text();
+    QString wm=ui->lineEdit_7->text();
+
 }
 

@@ -1,6 +1,5 @@
 #ifndef BASICINFO_H
 #define BASICINFO_H
-#include "myprofile.h"
 #include "basic.h"
 #include <QDialog>
 #include<QtSql>
@@ -25,7 +24,6 @@ private slots:
 
 private:
     Ui::basicinfo *ui;
-    myprofile *myprofileobj;
     basic *basicobj;
     QSqlDatabase db4;
 };

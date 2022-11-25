@@ -1,7 +1,9 @@
-#include "basicinfo.h"
+
 #include "ui_basicinfo.h"
 #include <QMessageBox>
 
+#include "mainwindow.h"
+MainWindow *mainwindowobjj;
 
 basicinfo::basicinfo(QWidget *parent) :
     QDialog(parent),
@@ -44,11 +46,11 @@ void basicinfo::on_pushButton_3_clicked()
          qry.bindValue(":Diettype", dietype);
          if(qry.exec())
          {
-              QMessageBox::information(this,"Basic Info","Basic info uploaded successfully.");
+              QMessageBox::information(this,"Basic Info","Basic info uploaded successfully. Login to continue");
               QSqlDatabase::removeDatabase("QMYSQL");
               hide();
-                  myprofileobj=new myprofile(this);
-                  myprofileobj->show();
+                  mainwindowobjj=new MainWindow(this);
+                  mainwindowobjj->show();
          }
          else
          {

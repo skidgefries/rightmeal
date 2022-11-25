@@ -40,6 +40,7 @@ private:
     workout *workoutobj;
     BodyFAT *bodyfatobj;
     QSqlDatabase db3;
+   // QSqlDatabase db5;
 };
 
 #endif // MYPROFILE_H
