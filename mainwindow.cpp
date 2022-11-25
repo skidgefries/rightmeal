@@ -8,11 +8,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    db2 = QSqlDatabase::addDatabase("QMYSQL");
-        db2.setHostName("127.0.0.1");
-        db2.setUserName("root");
-        db2.setPassword("0852");
-        db2.setDatabaseName("proj");
+    dblogin = QSqlDatabase::addDatabase("QMYSQL");
+        dblogin.setHostName("127.0.0.1");
+        dblogin.setUserName("root");
+        dblogin.setPassword("0852");
+        dblogin.setDatabaseName("proj");
 }
 
 MainWindow::~MainWindow()
@@ -33,12 +33,11 @@ void MainWindow::on_pushButton_9_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    if(db2.open())
-    {
+    dblogin.open();
         QString username=ui->lineEdit_5->text();
         QString password=ui->lineEdit_6->text();
         QSqlQuery qry;
-        qry.prepare(QString("SELECT * FROM signup WHERE username=:username AND password=:password"));
+        qry.prepare("SELECT * FROM signup WHERE username=:username AND password=:password");
         qry.bindValue(":username",username);
         qry.bindValue(":password",password);
         if(!qry.exec())
@@ -49,9 +48,9 @@ void MainWindow::on_pushButton_clicked()
         {
             while(qry.next())
             {
-                QString username=qry.value(0).toString();
-                QString password=qry.value(1).toString();
-                if(username==username && password==password)
+                QString usernamea=qry.value(0).toString();
+                QString passworda=qry.value(1).toString();
+                if(username==usernamea && password==passworda)
                 {
                    usernameg=username;
                    hide();
@@ -65,7 +64,6 @@ void MainWindow::on_pushButton_clicked()
                 }
             }
         }
-    }
 }
 
 

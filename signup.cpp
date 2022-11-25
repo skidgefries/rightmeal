@@ -12,11 +12,11 @@ signup::signup(QWidget *parent) :
     ui(new Ui::signup)
 {
     ui->setupUi(this);
-    db1 = QSqlDatabase::addDatabase("QMYSQL");
-        db1.setHostName("127.0.0.1");
-        db1.setUserName("root");
-        db1.setPassword("0852");
-        db1.setDatabaseName("proj");
+    dbsignup = QSqlDatabase::addDatabase("QMYSQL");
+        dbsignup.setHostName("127.0.0.1");
+        dbsignup.setUserName("root");
+        dbsignup.setPassword("0852");
+        dbsignup.setDatabaseName("proj");
 }
 
 signup::~signup()
@@ -26,7 +26,7 @@ signup::~signup()
 
 void signup::on_pushButton_clicked()
 {
-     if(db1.open())
+     if(dbsignup.open())
      {
        QString firstname = ui->lineEdit->text();
        QString midname= ui-> lineEdit_17 ->text();
@@ -72,7 +72,7 @@ void signup::on_pushButton_clicked()
         }
 
       }
-     db1.close();
+     dbsignup.close();
 
 
 

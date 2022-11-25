@@ -27,7 +27,7 @@ private slots:
 private:
     Ui::signup *ui;
     basicinfo *basicinfoobj;
-    QSqlDatabase db1;
+    QSqlDatabase dbsignup;
 };
 
 #endif // SIGNUP_H

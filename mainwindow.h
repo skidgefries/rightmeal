@@ -32,6 +32,6 @@ private:
     Ui::MainWindow *ui;
     signup *signupobj;
     myprofile *myprofileobj;
-    QSqlDatabase db2;
+    QSqlDatabase dblogin;
 };
 #endif // MAINWINDOW_H
