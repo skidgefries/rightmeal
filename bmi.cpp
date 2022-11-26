@@ -1,7 +1,8 @@
 #include "bmi.h"
 #include "ui_bmi.h"
-
+#include <cmath>
 #include "mainwindow.h"
+float bmi1;
 MainWindow *mainwindowobj4;
 
 #include "myprofile.h"
@@ -15,6 +16,8 @@ workout *workoutobj4;
 
 #include "bodyfat.h"
 BodyFAT *bodyfatobj4;
+
+
 
 bmi::bmi(QWidget *parent) :
     QDialog(parent),
@@ -66,4 +69,21 @@ void bmi::on_commandLinkButton_24_clicked()
     bodyfatobj4=new BodyFAT(this);
     bodyfatobj4->show();
 }
+
+
+void bmi::on_pushButton_clicked()
+{
+    float height;
+    QString gender = ui->comboBox->currentText();
+    QString age = ui->lineEdit_4->text();
+    float hft= ui->lineEdit->text().toFloat();
+    float hin= ui->lineEdit_2->text().toFloat();
+    float wt=ui->lineEdit_3->text().toFloat();
+    height=((hft*12+hin)*2.54)/100;
+    bmi1=wt/(height*height);
+    displaybmiobj=new displaybmi(this);
+    displaybmiobj->show();
+}
+
+
 

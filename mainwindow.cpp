@@ -36,8 +36,8 @@ void MainWindow::on_pushButton_clicked()
     dblogin.open();
         QString username=ui->lineEdit_5->text();
         QString password=ui->lineEdit_6->text();
-        QSqlQuery qry;
-        qry.prepare("SELECT * FROM signup WHERE username=:username AND password=:password");
+        QSqlQuery qry(QSqlDatabase::database("proj"));
+        qry.prepare(QString("SELECT * FROM signup WHERE username=:username AND password=:password"));
         qry.bindValue(":username",username);
         qry.bindValue(":password",password);
         if(!qry.exec())
@@ -48,9 +48,9 @@ void MainWindow::on_pushButton_clicked()
         {
             while(qry.next())
             {
-                QString usernamea=qry.value(0).toString();
-                QString passworda=qry.value(1).toString();
-                if(username==usernamea && password==passworda)
+                QString username=qry.value(0).toString();
+                QString password=qry.value(1).toString();
+                if(username==username && password==password)
                 {
                    usernameg=username;
                    hide();
@@ -61,6 +61,7 @@ void MainWindow::on_pushButton_clicked()
                 else
                 {
                     QMessageBox::warning(this,"Login","Username and password do not match.");
+                    qDebug() << qry.lastError().text()<<Qt::endl;
                 }
             }
         }

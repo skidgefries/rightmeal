@@ -19,18 +19,28 @@ myprofile::myprofile(QWidget *parent) :
 
     db3.open();
     QSqlQuery qry(db3);
-    QString username,dob,ln;
+    QString fullN,fn,mn,username,dob,ln,em,pw;
     extern QString usernameg;
     int age=20;
-    qry.prepare("SELECT username,dob FROM signup WHERE username=:username");
+    qry.prepare("SELECT Firstname, Midname, Lastname,email,username,password,dob FROM signup WHERE username=:username");
     qry.bindValue(":username",usernameg);
     if(qry.exec())
     {
     qry.first();
-    username= qry.value(0).toString() ;
-    dob= qry.value(1).toString();
+    fn= qry.value(0).toString() ;
+    mn= qry.value(1).toString() ;
+    ln= qry.value(2).toString();
+    em= qry.value(3).toString();
+    username= qry.value(4).toString() ;
+    pw= qry.value(5).toString();
+    dob= qry.value(6).toString();
 
-    ui->username->setText(username);
+    if(mn=="-")
+    fullN=fn+" "+ln;
+    else
+    fullN=fn+" "+mn+" "+ln;
+    ui->username->setText(fullN);
+    //ui->username->setText(username);
     ui->age->setNum(age);
     qDebug() << qry.lastError().text()<<Qt::endl;
     }

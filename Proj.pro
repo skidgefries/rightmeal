@@ -15,6 +15,7 @@ SOURCES += \
     bodyfat.cpp \
     caloriecalculator.cpp \
     dietplan.cpp \
+    displaybmi.cpp \
     main.cpp \
     mainwindow.cpp \
     myprofile.cpp \
@@ -28,6 +29,7 @@ HEADERS += \
     bodyfat.h \
     caloriecalculator.h \
     dietplan.h \
+    displaybmi.h \
     mainwindow.h \
     myprofile.h \
     signup.h \
@@ -40,6 +42,7 @@ FORMS += \
     bodyfat.ui \
     caloriecalculator.ui \
     dietplan.ui \
+    displaybmi.ui \
     mainwindow.ui \
     myprofile.ui \
     signup.ui \

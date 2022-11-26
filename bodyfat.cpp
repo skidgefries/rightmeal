@@ -1,6 +1,6 @@
 #include "bodyfat.h"
 #include "ui_bodyfat.h"
-
+#include<cmath>
 #include "mainwindow.h"
 MainWindow *mainwindowobj5;
 
@@ -77,14 +77,31 @@ void BodyFAT::on_commandLinkButton_23_clicked()
 void BodyFAT::on_pushButton_clicked()
 {
     dbbfc.open();
+    float BF,w,n,height,hp;
     QString gender = ui->Gender->currentText();
     QString age= ui-> age ->text();
-    QString hft=ui->lineEdit->text();
-    QString hin=ui->lineEdit_2->text();
-    QString wt=ui->lineEdit_3->text();
-    QString nm=ui->lineEdit_5->text();
-    QString hm=ui->lineEdit_6->text();
-    QString wm=ui->lineEdit_7->text();
+    float hft= ui->lineEdit->text().toFloat();
+    float hin= ui->lineEdit_2->text().toFloat();
+    float wt= ui->lineEdit_3->text().toFloat();
+    float neck= ui->lineEdit_5->text().toFloat();
+    float hip= ui->lineEdit_6->text().toFloat();
+    float waist= ui->lineEdit_7->text().toFloat();
+    height=(hft*12+hin)*2.54;
+    w=waist;
+    hp=hip;
+    w=waist;
 
+    if(gender=="Male")
+    {
+        BF=(495/(1.0324-0.19077*log10(w-n)+0.15456*log10(height)))-450;
+        ui->lineEdit_4->setText(QString::number(BF));
+
+    }
+    if(gender=="Female")
+    {
+        BF= (495/(1.29579-0.35004*log10(w+hp-n)+0.22100*log10(height)))-450;
+        ui->lineEdit_4->setText(QString::number(BF));
+
+    }
 }
 

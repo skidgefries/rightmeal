@@ -2,6 +2,7 @@
 #define BMI_H
 
 #include <QDialog>
+#include "displaybmi.h"
 
 namespace Ui {
 class bmi;
@@ -26,8 +27,11 @@ private slots:
 
     void on_commandLinkButton_24_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::bmi *ui;
+    displaybmi *displaybmiobj;
 };
 
 #endif // BMI_H
