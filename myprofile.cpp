@@ -19,28 +19,18 @@ myprofile::myprofile(QWidget *parent) :
 
     db3.open();
     QSqlQuery qry(db3);
-    QString fullN,fn,mn,username,dob,ln,em,pw;
+    QString username,dob,ln;
     extern QString usernameg;
     int age=20;
-    qry.prepare("SELECT Firstname, Midname, Lastname,email,username,password,dob FROM signup WHERE username=:username");
+    qry.prepare("SELECT username,dob FROM signup WHERE username=:username");
     qry.bindValue(":username",usernameg);
     if(qry.exec())
     {
-    qry.first();
-    fn= qry.value(0).toString() ;
-    mn= qry.value(1).toString() ;
-    ln= qry.value(2).toString();
-    em= qry.value(3).toString();
-    username= qry.value(4).toString() ;
-    pw= qry.value(5).toString();
-    dob= qry.value(6).toString();
+    qry.next();
+    username= qry.value(0).toString() ;
+    dob= qry.value(1).toString();
 
-    if(mn=="-")
-    fullN=fn+" "+ln;
-    else
-    fullN=fn+" "+mn+" "+ln;
-    ui->username->setText(fullN);
-    //ui->username->setText(username);
+    ui->username->setText(username);
     ui->age->setNum(age);
     qDebug() << qry.lastError().text()<<Qt::endl;
     }
@@ -52,13 +42,14 @@ myprofile::myprofile(QWidget *parent) :
     //db5.open();
     QSqlQuery qry1(db3);
     extern QString usernameg;
-    QString hf,hin, winkg,gender,bodyfat,diettype;
-    float hfin =5.3;
-    qry1.prepare("SELECT Gender,heightft,Heighin,Weight,Bodyfat,Diettype FROM basicinfo WHERE username=:username");
+    QString  hfin,hf,hin,winkg,gender,bodyfat,diettype;
+    //float hfin ,hf, hin;//=5.3;
+    qry1.prepare("SELECT  Gender,heightft,Heighin,Weight,Bodyfat,Diettype FROM basicinfo WHERE username=:username");
     qry1.bindValue(":username",usernameg);
-    qry1.exec();
-    qry1.next();
- {
+    if (qry1.exec())
+    {
+        qry1.first();
+
 
     hf= qry1.value(1).toString();
     hin= qry1.value(2).toString();
@@ -67,18 +58,20 @@ myprofile::myprofile(QWidget *parent) :
     bodyfat=qry1.value(4).toString();
     diettype=qry1.value(5).toString();
 
+    hfin= hf + "'" + hin;
     //hfin=hf+" /' " + hin+ " ;/"d ";
     //hfin = Qt:: cout<<hf<<"/'"<<hin<<"/"/"";
-    ui->height->setNum(hfin);
+    ui->height->setText(hfin);
     ui->weight->setText(winkg);
     ui->gender->setText(gender);
     ui->bodyfat->setText(bodyfat);
     ui->diet->setText(diettype);
     }
-   /* else
+    else
     {
         QMessageBox::information(this,"myprofile","Not executed second");
-    }*/
+        qDebug() << qry.lastError().text()<<Qt::endl;
+    }
 
 }
 
