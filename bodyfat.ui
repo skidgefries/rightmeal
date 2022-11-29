@@ -183,7 +183,7 @@ QLineEdit {font: #161514;}
               <widget class="QCommandLinkButton" name="commandLinkButton_6">
                <property name="font">
                 <font>
-                 <family>Segoe UI</family>
+                 <family>Times New Roman</family>
                  <pointsize>16</pointsize>
                  <bold>false</bold>
                 </font>
@@ -224,7 +224,7 @@ QLineEdit {font: #161514;}
               <widget class="QCommandLinkButton" name="commandLinkButton_21">
                <property name="font">
                 <font>
-                 <family>Segoe UI</family>
+                 <family>Times New Roman</family>
                  <pointsize>16</pointsize>
                  <bold>false</bold>
                 </font>
@@ -265,7 +265,7 @@ QLineEdit {font: #161514;}
               <widget class="QCommandLinkButton" name="commandLinkButton_22">
                <property name="font">
                 <font>
-                 <family>Segoe UI</family>
+                 <family>Times New Roman</family>
                  <pointsize>16</pointsize>
                  <bold>false</bold>
                 </font>
@@ -306,7 +306,7 @@ QLineEdit {font: #161514;}
               <widget class="QCommandLinkButton" name="commandLinkButton_23">
                <property name="font">
                 <font>
-                 <family>Segoe UI</family>
+                 <family>Times New Roman</family>
                  <pointsize>16</pointsize>
                  <bold>false</bold>
                 </font>
@@ -347,7 +347,7 @@ QLineEdit {font: #161514;}
               <widget class="QCommandLinkButton" name="commandLinkButton_24">
                <property name="font">
                 <font>
-                 <family>Segoe UI</family>
+                 <family>Times New Roman</family>
                  <pointsize>16</pointsize>
                  <bold>false</bold>
                 </font>
@@ -388,7 +388,7 @@ QLineEdit {font: #161514;}
               <widget class="QCommandLinkButton" name="commandLinkButton_25">
                <property name="font">
                 <font>
-                 <family>Segoe UI</family>
+                 <family>Times New Roman</family>
                  <pointsize>16</pointsize>
                  <bold>false</bold>
                 </font>
@@ -429,7 +429,7 @@ QLineEdit {font: #161514;}
               <widget class="QCommandLinkButton" name="commandLinkButton_26">
                <property name="font">
                 <font>
-                 <family>Segoe UI</family>
+                 <family>Times New Roman</family>
                  <pointsize>16</pointsize>
                  <bold>false</bold>
                 </font>
@@ -931,6 +931,14 @@ QLineEdit {font: #161514;}
                    </property>
                    <item>
                     <widget class="QComboBox" name="Gender">
+                     <property name="font">
+                      <font>
+                       <family>Times New Roman</family>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QComboBox{background:#ffffff};</string>
+                     </property>
                      <item>
                       <property name="text">
                        <string/>
@@ -1181,8 +1189,11 @@ QLineEdit{background:#ffffff;}
 
 QTextEdit {font: #161514;}</string>
                      </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
                      <property name="placeholderText">
-                      <string>in inches</string>
+                      <string>in cm</string>
                      </property>
                     </widget>
                    </item>
@@ -1236,7 +1247,7 @@ QLineEdit{background:#ffffff;}
 QTextEdit {font: #161514;}</string>
                      </property>
                      <property name="placeholderText">
-                      <string>in inches</string>
+                      <string>in cm</string>
                      </property>
                     </widget>
                    </item>
@@ -1290,7 +1301,7 @@ QLineEdit{background:#ffffff;}
 QTextEdit {font: #161514;}</string>
                      </property>
                      <property name="placeholderText">
-                      <string>in inches</string>
+                      <string>in cm</string>
                      </property>
                     </widget>
                    </item>
@@ -1333,9 +1344,6 @@ QTextEdit {font: #161514;}</string>
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_4"/>
-             </item>
              <item alignment="Qt::AlignHCenter">
               <widget class="QFrame" name="frame_41">
                <property name="maximumSize">

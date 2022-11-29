@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include<QtSql>
 #include<QSqlDatabase>
+#include"displaybf.h"
+#include "settings.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class BodyFAT; }
@@ -30,8 +32,12 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_commandLinkButton_25_clicked();
+
 private:
     Ui::BodyFAT *ui;
     QSqlDatabase dbbfc;
+    displaybf *displaybfobj;
+    settings *settingsobj4;
 };
 #endif // BODYFAT_H

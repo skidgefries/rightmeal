@@ -4,7 +4,7 @@
 #include "myprofile.h"
 #include<QtSql>
 #include<QSqlDatabase>
-
+#include<QSqlQuery>
 #include <QMainWindow>
 
 

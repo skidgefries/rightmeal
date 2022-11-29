@@ -182,7 +182,7 @@ QLineEdit {font: #161514;}
              <widget class="QCommandLinkButton" name="commandLinkButton_6">
               <property name="font">
                <font>
-                <family>Segoe UI</family>
+                <family>Times New Roman</family>
                 <pointsize>16</pointsize>
                 <bold>false</bold>
                </font>
@@ -223,7 +223,7 @@ QLineEdit {font: #161514;}
              <widget class="QCommandLinkButton" name="commandLinkButton_21">
               <property name="font">
                <font>
-                <family>Segoe UI</family>
+                <family>Times New Roman</family>
                 <pointsize>16</pointsize>
                 <bold>false</bold>
                </font>
@@ -264,7 +264,7 @@ QLineEdit {font: #161514;}
              <widget class="QCommandLinkButton" name="commandLinkButton_22">
               <property name="font">
                <font>
-                <family>Segoe UI</family>
+                <family>Times New Roman</family>
                 <pointsize>16</pointsize>
                 <bold>false</bold>
                </font>
@@ -305,7 +305,7 @@ QLineEdit {font: #161514;}
              <widget class="QCommandLinkButton" name="commandLinkButton_23">
               <property name="font">
                <font>
-                <family>Segoe UI</family>
+                <family>Times New Roman</family>
                 <pointsize>16</pointsize>
                 <bold>false</bold>
                </font>
@@ -346,7 +346,7 @@ QLineEdit {font: #161514;}
              <widget class="QCommandLinkButton" name="commandLinkButton_24">
               <property name="font">
                <font>
-                <family>Segoe UI</family>
+                <family>Times New Roman</family>
                 <pointsize>16</pointsize>
                 <bold>false</bold>
                </font>
@@ -387,7 +387,7 @@ QLineEdit {font: #161514;}
              <widget class="QCommandLinkButton" name="commandLinkButton_25">
               <property name="font">
                <font>
-                <family>Segoe UI</family>
+                <family>Times New Roman</family>
                 <pointsize>16</pointsize>
                 <bold>false</bold>
                </font>
@@ -428,7 +428,7 @@ QLineEdit {font: #161514;}
              <widget class="QCommandLinkButton" name="commandLinkButton_26">
               <property name="font">
                <font>
-                <family>Segoe UI</family>
+                <family>Times New Roman</family>
                 <pointsize>16</pointsize>
                 <bold>false</bold>
                </font>
@@ -823,7 +823,7 @@ QLineEdit {font: #161514;}
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">QMainWindow {background: #e0d3b6;}
+                     <string notr="true">QComboBox{background:#ffffff};QMainWindow {background: #e0d3b6;}
 QWidget {background: #e0d3b6;}
 QFrame {background: #e0d3b6;}
 QCommandLinkButton  {background:#e0d3b6;}

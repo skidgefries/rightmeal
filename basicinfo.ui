@@ -363,6 +363,14 @@ QTextEdit {font: #161514;}</string>
               <height>0</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{background:#ffffff};</string>
+            </property>
             <item>
              <property name="text">
               <string>Male</string>
@@ -465,6 +473,14 @@ QTextEdit {font: #161514;}</string>
               <height>0</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{background:#ffffff};</string>
+            </property>
             <item>
              <property name="text">
               <string>Low</string>
@@ -501,6 +517,14 @@ QTextEdit {font: #161514;}</string>
               <width>200</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{background:#ffffff};</string>
             </property>
             <item>
              <property name="text">
@@ -543,6 +567,14 @@ QTextEdit {font: #161514;}</string>
               <width>200</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox{background:#ffffff};</string>
             </property>
             <item>
              <property name="text">

@@ -87,3 +87,11 @@ void bmi::on_pushButton_clicked()
 
 
 
+
+void bmi::on_commandLinkButton_25_clicked()
+{
+    hide();
+    settingsobj3 = new settings(this);
+    settingsobj3->show();
+}
+

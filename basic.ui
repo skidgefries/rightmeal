@@ -546,6 +546,9 @@ QLineEdit {font: #161514;}
                        <family>Times New Roman</family>
                       </font>
                      </property>
+                     <property name="styleSheet">
+                      <string notr="true">QComboBox{background:#ffffff};</string>
+                     </property>
                      <item>
                       <property name="text">
                        <string>Male</string>

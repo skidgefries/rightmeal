@@ -1,6 +1,7 @@
 #ifndef DIETPLAN_H
 #define DIETPLAN_H
 #include"caloriecalculator.h"
+#include "settings.h"
 #include <QDialog>
 
 namespace Ui {
@@ -28,9 +29,12 @@ private slots:
 
     void on_commandLinkButton_24_clicked();
 
+    void on_commandLinkButton_25_clicked();
+
 private:
     Ui::dietplan *ui;
     caloriecalculator *caloriecalculatorobj;
+    settings *settingsobj1;
 };
 
 #endif // DIETPLAN_H

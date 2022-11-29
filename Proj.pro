@@ -15,10 +15,12 @@ SOURCES += \
     bodyfat.cpp \
     caloriecalculator.cpp \
     dietplan.cpp \
+    displaybf.cpp \
     displaybmi.cpp \
     main.cpp \
     mainwindow.cpp \
     myprofile.cpp \
+    settings.cpp \
     signup.cpp \
     workout.cpp
 
@@ -29,9 +31,11 @@ HEADERS += \
     bodyfat.h \
     caloriecalculator.h \
     dietplan.h \
+    displaybf.h \
     displaybmi.h \
     mainwindow.h \
     myprofile.h \
+    settings.h \
     signup.h \
     workout.h
 
@@ -42,9 +46,11 @@ FORMS += \
     bodyfat.ui \
     caloriecalculator.ui \
     dietplan.ui \
+    displaybf.ui \
     displaybmi.ui \
     mainwindow.ui \
     myprofile.ui \
+    settings.ui \
     signup.ui \
     workout.ui
 
@@ -54,5 +60,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    icons.qrc \
     image.qrc
+
+DISTFILES +=

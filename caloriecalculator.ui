@@ -826,7 +826,12 @@ QLineEdit {font: #161514;}
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_8">
                <item>
-                <widget class="QComboBox" name="comboBox">
+                <widget class="QComboBox" name="gender">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                  </font>
+                 </property>
                  <property name="styleSheet">
                   <string notr="true">QMainWindow {background: #e0d3b6;}
 QWidget {background: #e0d3b6;}
@@ -834,7 +839,7 @@ QFrame {background: #e0d3b6;}
 QCommandLinkButton  {background:#e0d3b6;}
 QLabel {background: #e0d3b6;}
 QLineEdit {font: #161514;}
-QLineEdit {background: #ffffff;}</string>
+QLineEdit {background: #ffffff;}QComboBox{background:#ffffff};</string>
                  </property>
                  <item>
                   <property name="text">
@@ -872,12 +877,19 @@ QLineEdit {background: #ffffff;}</string>
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_9">
                <item>
-                <widget class="QLineEdit" name="lineEdit_2">
+                <widget class="QLineEdit" name="height_input">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
                    <height>0</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QMainWindow {background: #e0d3b6;}
@@ -916,12 +928,19 @@ QLineEdit {background: #ffffff;}
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_10">
                <item>
-                <widget class="QLineEdit" name="lineEdit_3">
+                <widget class="QLineEdit" name="weight_input">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
                    <height>0</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QMainWindow {background: #e0d3b6;}
@@ -960,12 +979,19 @@ QLineEdit {background: #ffffff;}
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_11">
                <item>
-                <widget class="QLineEdit" name="lineEdit_4">
+                <widget class="QLineEdit" name="age_input">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
                    <height>0</height>
                   </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <italic>false</italic>
+                   <bold>false</bold>
+                  </font>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">QMainWindow {background: #e0d3b6;}
@@ -988,12 +1014,12 @@ QLineEdit {background: #ffffff;}
               </layout>
              </widget>
             </item>
-            <item>
+            <item alignment="Qt::AlignTop">
              <widget class="QFrame" name="frame_21">
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>0</height>
+                <height>194</height>
                </size>
               </property>
               <property name="frameShape">
@@ -1004,118 +1030,59 @@ QLineEdit {background: #ffffff;}
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_13">
                <item>
-                <widget class="QRadioButton" name="radioButton_3">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
+                <widget class="QComboBox" name="activitylevel_input">
                  <property name="font">
                   <font>
                    <family>Times New Roman</family>
-                   <pointsize>12</pointsize>
                   </font>
                  </property>
-                 <property name="text">
-                  <string>Sedentary</string>
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox{background:#ffffff};</string>
                  </property>
+                 <item>
+                  <property name="text">
+                   <string>Sedentary</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Light</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Moderate</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Active</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Very Active</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Extra Active</string>
+                  </property>
+                 </item>
                 </widget>
                </item>
                <item>
-                <widget class="QRadioButton" name="radioButton_8">
-                 <property name="minimumSize">
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
                   <size>
-                   <width>0</width>
-                   <height>0</height>
+                   <width>20</width>
+                   <height>40</height>
                   </size>
                  </property>
-                 <property name="font">
-                  <font>
-                   <family>Times New Roman</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Light</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="radioButton_7">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Times New Roman</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Moderate</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="radioButton_6">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Times New Roman</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Active</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="radioButton_5">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Times New Roman</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Very Active</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QRadioButton" name="radioButton_4">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Times New Roman</family>
-                   <pointsize>12</pointsize>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>Extra Active</string>
-                 </property>
-                </widget>
+                </spacer>
                </item>
               </layout>
              </widget>
@@ -1125,6 +1092,9 @@ QLineEdit {background: #ffffff;}
          </item>
         </layout>
        </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit"/>
       </item>
       <item alignment="Qt::AlignHCenter">
        <widget class="QFrame" name="frame_25">

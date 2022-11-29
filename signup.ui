@@ -188,7 +188,7 @@ QTextEdit {font: #161514;}
                </font>
               </property>
               <property name="text">
-               <string>Name</string>
+               <string>Name*</string>
               </property>
              </widget>
             </item>
@@ -236,7 +236,7 @@ QTextEdit {font: #161514;}
                </font>
               </property>
               <property name="text">
-               <string>Email</string>
+               <string>Email*</string>
               </property>
              </widget>
             </item>
@@ -281,7 +281,7 @@ QTextEdit {font: #161514;}
                </font>
               </property>
               <property name="text">
-               <string>Username</string>
+               <string>Username*</string>
               </property>
              </widget>
             </item>
@@ -326,7 +326,7 @@ QTextEdit {font: #161514;}
                </font>
               </property>
               <property name="text">
-               <string>Password</string>
+               <string>Password*</string>
               </property>
              </widget>
             </item>
@@ -371,7 +371,7 @@ QTextEdit {font: #161514;}
                </font>
               </property>
               <property name="text">
-               <string>Confirm Password</string>
+               <string>Confirm Password*</string>
               </property>
              </widget>
             </item>
@@ -416,7 +416,7 @@ QTextEdit {font: #161514;}
                </font>
               </property>
               <property name="text">
-               <string>Date of Birth (DD/MM/YYYY)</string>
+               <string>Date of Birth (DD/MM/YYYY)*</string>
               </property>
              </widget>
             </item>
@@ -728,7 +728,7 @@ QTextEdit {font: #161514;}
                 <second>0</second>
                 <year>2022</year>
                 <month>12</month>
-                <day>10</day>
+                <day>8</day>
                </datetime>
               </property>
               <property name="displayFormat">
@@ -869,6 +869,11 @@ QTextEdit {font: #161514;}
            <layout class="QVBoxLayout" name="verticalLayout_14">
             <item alignment="Qt::AlignHCenter">
              <widget class="QCommandLinkButton" name="commandLinkButton">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+               </font>
+              </property>
               <property name="text">
                <string>Already have an account?</string>
               </property>

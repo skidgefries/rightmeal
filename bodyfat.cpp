@@ -4,6 +4,7 @@
 #include "mainwindow.h"
 MainWindow *mainwindowobj5;
 
+float BF;
 #include "myprofile.h"
 myprofile *myprofileobj5;
 
@@ -77,7 +78,7 @@ void BodyFAT::on_commandLinkButton_23_clicked()
 void BodyFAT::on_pushButton_clicked()
 {
     dbbfc.open();
-    float BF,w,n,height,hp;
+    float w,n,height,hp;
     QString gender = ui->Gender->currentText();
     QString age= ui-> age ->text();
     float hft= ui->lineEdit->text().toFloat();
@@ -89,19 +90,28 @@ void BodyFAT::on_pushButton_clicked()
     height=(hft*12+hin)*2.54;
     w=waist;
     hp=hip;
-    w=waist;
+    n=neck;
 
     if(gender=="Male")
     {
         BF=(495/(1.0324-0.19077*log10(w-n)+0.15456*log10(height)))-450;
-        ui->lineEdit_4->setText(QString::number(BF));
+        //ui->lineEdit_4->setText(QString::number(BF));
 
     }
     if(gender=="Female")
     {
         BF= (495/(1.29579-0.35004*log10(w+hp-n)+0.22100*log10(height)))-450;
-        ui->lineEdit_4->setText(QString::number(BF));
-
+        //ui->lineEdit_4->setText(QString::number(BF));
     }
+    displaybfobj=new displaybf(this);
+    displaybfobj->show();
+}
+
+
+void BodyFAT::on_commandLinkButton_25_clicked()
+{
+    hide();
+    settingsobj4 = new settings(this);
+    settingsobj4->show();
 }
 

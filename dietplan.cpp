@@ -80,3 +80,11 @@ void dietplan::on_commandLinkButton_24_clicked()
     bodyfatobj2->show();
 }
 
+
+void dietplan::on_commandLinkButton_25_clicked()
+{
+    hide();
+    settingsobj1 = new settings(this);
+    settingsobj1->show();
+}
+

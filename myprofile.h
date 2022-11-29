@@ -5,6 +5,7 @@
 #include <QDialog>
 #include "workout.h"
 #include "bodyfat.h"
+#include "settings.h"
 #include<QtSql>
 #include<QSqlDatabase>
 #include<QSqlQuery>
@@ -33,11 +34,14 @@ private slots:
 
     void on_commandLinkButton_12_clicked();
 
+    void on_commandLinkButton_13_clicked();
+
 private:
     Ui::myprofile *ui;
     dietplan *dietplanobj;
     bmi *bmiobj;
     workout *workoutobj;
+    settings *settingsobj;
     BodyFAT *bodyfatobj;
     QSqlDatabase db3;
    // QSqlDatabase db5;

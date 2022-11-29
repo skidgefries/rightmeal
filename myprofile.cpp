@@ -19,18 +19,27 @@ myprofile::myprofile(QWidget *parent) :
 
     db3.open();
     QSqlQuery qry(db3);
-    QString username,dob,ln;
+    QString name,dob,ln;
     extern QString usernameg;
     int age=20;
-    qry.prepare("SELECT username,dob FROM signup WHERE username=:username");
+    qry.prepare("SELECT Firstname,Midname,Lastname,dob FROM signup WHERE username=:username");
     qry.bindValue(":username",usernameg);
+
     if(qry.exec())
     {
     qry.next();
-    username= qry.value(0).toString() ;
-    dob= qry.value(1).toString();
+    QString mn=qry.value(1).toString();
+    if(mn=="0")
+    {
+        name= qry.value(0).toString()+" "+qry.value(2).toString() ;
+    }
+    else
+    {
+        name= qry.value(0).toString()+" "+qry.value(1).toString()+" "+qry.value(2).toString() ;
+    }
+    dob= qry.value(3).toString();
 
-    ui->username->setText(username);
+    ui->username->setText(name);
     ui->age->setNum(age);
     qDebug() << qry.lastError().text()<<Qt::endl;
     }
@@ -117,5 +126,14 @@ void myprofile::on_commandLinkButton_12_clicked()
     hide();
     bodyfatobj=new BodyFAT(this);
     bodyfatobj->show();
+}
+
+
+
+void myprofile::on_commandLinkButton_13_clicked()
+{
+    hide();
+    settingsobj = new settings(this);
+    settingsobj->show();
 }
 
