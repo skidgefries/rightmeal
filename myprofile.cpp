@@ -19,14 +19,11 @@ myprofile::myprofile(QWidget *parent) :
 
     db3.open();
     QSqlQuery qry(db3);
-    QString name,dob,ln;
+    QString name,ln;
     extern QString usernameg;
-    int age=20;
     qry.prepare("SELECT Firstname,Midname,Lastname,dob FROM signup WHERE username=:username");
     qry.bindValue(":username",usernameg);
-
-    if(qry.exec())
-    {
+    qry.exec();
     qry.next();
     QString mn=qry.value(1).toString();
     if(mn=="0")
@@ -37,17 +34,19 @@ myprofile::myprofile(QWidget *parent) :
     {
         name= qry.value(0).toString()+" "+qry.value(1).toString()+" "+qry.value(2).toString() ;
     }
-    dob= qry.value(3).toString();
+    QDate dob= qry.value(3).toDate();
+    QDate a= QDate::currentDate();
+    qint64 days=dob.daysTo(a)/365;
+    int day=days;
 
     ui->username->setText(name);
-    ui->age->setNum(age);
-    qDebug() << qry.lastError().text()<<Qt::endl;
-    }
-    else
-    {
-        QMessageBox::information(this,"myprofile","Not executed suruko");
-        qDebug() << qry.lastError().text()<<Qt::endl;
-    }
+    ui->age->setNum(day);
+    qDebug()<<days<<Qt::endl;
+//    else
+//    {
+//        QMessageBox::information(this,"myprofile","Not executed suruko");
+//        qDebug() << qry.lastError().text()<<Qt::endl;
+//    }
     //db5.open();
     QSqlQuery qry1(db3);
     extern QString usernameg;
@@ -135,5 +134,13 @@ void myprofile::on_commandLinkButton_13_clicked()
     hide();
     settingsobj = new settings(this);
     settingsobj->show();
+}
+
+
+void myprofile::on_pushButton_clicked()
+{
+    close();
+    upbasicinfoobj1 = new updatebasicinfo(this);
+    upbasicinfoobj1->show();
 }
 

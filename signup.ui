@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1034</width>
+    <width>1043</width>
     <height>700</height>
    </rect>
   </property>
@@ -500,7 +500,7 @@ QTextEdit {font: #161514;}
                <string/>
               </property>
               <property name="placeholderText">
-               <string>First Name</string>
+               <string>First Name*</string>
               </property>
              </widget>
             </item>
@@ -554,7 +554,7 @@ QTextEdit {font: #161514;}
                </font>
               </property>
               <property name="placeholderText">
-               <string>Last Name</string>
+               <string>Last Name*</string>
               </property>
              </widget>
             </item>
@@ -728,7 +728,7 @@ QTextEdit {font: #161514;}
                 <second>0</second>
                 <year>2022</year>
                 <month>12</month>
-                <day>8</day>
+                <day>7</day>
                </datetime>
               </property>
               <property name="displayFormat">

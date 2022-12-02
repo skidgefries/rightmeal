@@ -28,6 +28,10 @@ private slots:
 
     void on_pushButton_8_clicked();
 
+    void on_lineEdit_5_returnPressed();
+
+    void on_lineEdit_6_returnPressed();
+
 private:
     Ui::MainWindow *ui;
     signup *signupobj;

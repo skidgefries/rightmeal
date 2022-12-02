@@ -795,7 +795,7 @@ QLineEdit{background:#ffffff;}
 QTextEdit {font: #161514;}</string>
                      </property>
                      <property name="placeholderText">
-                      <string>in inches</string>
+                      <string>in cm</string>
                      </property>
                     </widget>
                    </item>
@@ -849,7 +849,7 @@ QLineEdit{background:#ffffff;}
 QTextEdit {font: #161514;}</string>
                      </property>
                      <property name="placeholderText">
-                      <string>in inches</string>
+                      <string>in cm</string>
                      </property>
                     </widget>
                    </item>
@@ -903,7 +903,7 @@ QLineEdit{background:#ffffff;}
 QTextEdit {font: #161514;}</string>
                      </property>
                      <property name="placeholderText">
-                      <string>in inches</string>
+                      <string>in cm</string>
                      </property>
                     </widget>
                    </item>

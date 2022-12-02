@@ -77,7 +77,6 @@ void BodyFAT::on_commandLinkButton_23_clicked()
 
 void BodyFAT::on_pushButton_clicked()
 {
-    dbbfc.open();
     float w,n,height,hp;
     QString gender = ui->Gender->currentText();
     QString age= ui-> age ->text();

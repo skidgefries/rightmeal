@@ -6,6 +6,7 @@
 #include "workout.h"
 #include "bodyfat.h"
 #include "settings.h"
+#include "updatebasicinfo.h"
 #include<QtSql>
 #include<QSqlDatabase>
 #include<QSqlQuery>
@@ -36,6 +37,8 @@ private slots:
 
     void on_commandLinkButton_13_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::myprofile *ui;
     dietplan *dietplanobj;
@@ -44,6 +47,7 @@ private:
     settings *settingsobj;
     BodyFAT *bodyfatobj;
     QSqlDatabase db3;
+    updatebasicinfo *upbasicinfoobj1;
    // QSqlDatabase db5;
 };
 

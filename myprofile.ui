@@ -667,7 +667,7 @@ QLineEdit {font: #161514;}
                      </font>
                     </property>
                     <property name="text">
-                     <string>Username</string>
+                     <string>Name</string>
                     </property>
                    </widget>
                   </item>

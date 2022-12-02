@@ -4,5 +4,7 @@
         <file>logo</file>
         <file>about.png</file>
         <file>Help.png</file>
+        <file>025-lock.png</file>
+        <file>user.png</file>
     </qresource>
 </RCC>

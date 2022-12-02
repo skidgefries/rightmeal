@@ -14,6 +14,7 @@ SOURCES += \
     bmi.cpp \
     bodyfat.cpp \
     caloriecalculator.cpp \
+    dbf.cpp \
     dietplan.cpp \
     displaybf.cpp \
     displaybmi.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
     myprofile.cpp \
     settings.cpp \
     signup.cpp \
+    updatebasicinfo.cpp \
     workout.cpp
 
 HEADERS += \
@@ -30,6 +32,7 @@ HEADERS += \
     bmi.h \
     bodyfat.h \
     caloriecalculator.h \
+    dbf.h \
     dietplan.h \
     displaybf.h \
     displaybmi.h \
@@ -37,6 +40,7 @@ HEADERS += \
     myprofile.h \
     settings.h \
     signup.h \
+    updatebasicinfo.h \
     workout.h
 
 FORMS += \
@@ -45,6 +49,7 @@ FORMS += \
     bmi.ui \
     bodyfat.ui \
     caloriecalculator.ui \
+    dbf.ui \
     dietplan.ui \
     displaybf.ui \
     displaybmi.ui \
@@ -52,6 +57,7 @@ FORMS += \
     myprofile.ui \
     settings.ui \
     signup.ui \
+    updatebasicinfo.ui \
     workout.ui
 
 # Default rules for deployment.

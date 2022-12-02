@@ -70,3 +70,5 @@ void basicinfo::on_pushButton_clicked()
     basicobj->show();
 }
 
+
+

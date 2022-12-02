@@ -115,3 +115,15 @@ void MainWindow::on_pushButton_clicked()
 
 
 
+
+void MainWindow::on_lineEdit_5_returnPressed()
+{
+    on_pushButton_clicked();
+}
+
+
+void MainWindow::on_lineEdit_6_returnPressed()
+{
+    on_pushButton_clicked();
+}
+
