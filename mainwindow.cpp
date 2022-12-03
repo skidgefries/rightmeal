@@ -8,6 +8,16 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+   /* QAction *action = addAction(QIcon(":/eyeOff"), QLineEdit::TrailingPosition);
+        button = qobject_cast<QToolButton *>(action->associatedWidgets().last());
+        button->hide();
+        button->setCursor(QCursor(Qt::PointingHandCursor));
+        connect(button, &QToolButton::pressed, this, &MainWindow::onPressed);
+        connect(button, &QToolButton::released, this, &MainWindow::onReleased);*/
+
+
     dblogin = QSqlDatabase::addDatabase("QMYSQL","trial");
         dblogin.setHostName("127.0.0.1");
         dblogin.setUserName("root");
@@ -43,9 +53,6 @@ void MainWindow::on_pushButton_clicked()
         else
         {
         QSqlQuery qry(dblogin),qry1(dblogin);
-//        qry.prepare(QString("SELECT * FROM signup WHERE username=:username AND password=:password"));
-//        qry.bindValue(":username",username1);
-//        qry.bindValue(":password",password1);
         qry1.prepare("SELECT password FROM signup WHERE username=:username");
         qry1.bindValue(":username",username1);
         qry1.exec();

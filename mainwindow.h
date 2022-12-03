@@ -8,6 +8,10 @@
 #include <QMainWindow>
 
 
+/*#include <QAction>
+#include <QLineEdit>
+#include <QToolButton>*/
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -32,10 +36,20 @@ private slots:
 
     void on_lineEdit_6_returnPressed();
 
+    //void onPressed();
+    //void onReleased()
+
+/*protected:
+    void enterEvent(QEvent *event);
+    void leaveEvent(QEvent *event);
+    void focusInEvent(QFocusEvent *event);
+    void focusOutEvent(QFocusEvent *event);*/
+
 private:
     Ui::MainWindow *ui;
     signup *signupobj;
     myprofile *myprofileobj;
     QSqlDatabase dblogin;
+   // QToolButton *button;
 };
 #endif // MAINWINDOW_H

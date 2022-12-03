@@ -105,7 +105,7 @@ QLineEdit {font: #161514;}
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap>../../../Downloads/image0.png</pixmap>
+            <pixmap resource="image.qrc">:/img/logo</pixmap>
            </property>
            <property name="scaledContents">
             <bool>true</bool>
@@ -1137,6 +1137,8 @@ QLineEdit {background: #ffffff;}
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>
