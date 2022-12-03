@@ -19,8 +19,7 @@ basic::~basic()
 void basic::on_pushButton_2_clicked()
 {
     hide();
-    basicinfoobj1=new basicinfo(this);
-    basicinfoobj1->show();
+   
 }
 
 
