@@ -1,40 +1,31 @@
 #ifndef DIETPLAN_H
 #define DIETPLAN_H
-#include"caloriecalculator.h"
-#include "settings.h"
-#include <QDialog>
+#include<QtSql>
+#include<QSqlDatabase>
+#include<QSqlQuery>
+#include <QMainWindow>
+#include<QMessageBox>
 
-namespace Ui {
-class dietplan;
-}
+#include<QAbstractButton>
+QT_BEGIN_NAMESPACE
+namespace Ui { class dietplan; }
+QT_END_NAMESPACE
 
-class dietplan : public QDialog
+class dietplan : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit dietplan(QWidget *parent = nullptr);
+    dietplan(QWidget *parent = nullptr);
     ~dietplan();
 
 private slots:
     void on_pushButton_clicked();
 
-    void on_commandLinkButton_26_clicked();
-
-    void on_commandLinkButton_6_clicked();
-
-    void on_commandLinkButton_22_clicked();
-
-    void on_commandLinkButton_23_clicked();
-
-    void on_commandLinkButton_24_clicked();
-
-    void on_commandLinkButton_25_clicked();
-
 private:
     Ui::dietplan *ui;
-    caloriecalculator *caloriecalculatorobj;
-    settings *settingsobj1;
+    QSqlDatabase db;
 };
-
 #endif // DIETPLAN_H
+
+

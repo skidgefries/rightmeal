@@ -12,7 +12,7 @@ updatebasicinfo::updatebasicinfo(QWidget *parent)
     db69 = QSqlDatabase::addDatabase("QMYSQL");
         db69.setHostName("127.0.0.1");
         db69.setUserName("root");
-        db69.setPassword("0852");
+        db69.setPassword("MySQL@2020");
         db69.setDatabaseName("proj");
 
 }

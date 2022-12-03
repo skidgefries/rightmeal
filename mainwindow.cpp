@@ -9,7 +9,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-
    /* QAction *action = addAction(QIcon(":/eyeOff"), QLineEdit::TrailingPosition);
         button = qobject_cast<QToolButton *>(action->associatedWidgets().last());
         button->hide();
@@ -21,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
     dblogin = QSqlDatabase::addDatabase("QMYSQL","trial");
         dblogin.setHostName("127.0.0.1");
         dblogin.setUserName("root");
-        dblogin.setPassword("0852");
+        dblogin.setPassword("MySQL@2020");
         dblogin.setDatabaseName("proj");
 }
 

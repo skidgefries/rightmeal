@@ -14,7 +14,7 @@ myprofile::myprofile(QWidget *parent) :
     db3 = QSqlDatabase::addDatabase("QMYSQL");
         db3.setHostName("127.0.0.1");
         db3.setUserName("root");
-        db3.setPassword("0852");
+        db3.setPassword("MySQL@2020");
         db3.setDatabaseName("proj");
 
     db3.open();

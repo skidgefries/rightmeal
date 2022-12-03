@@ -15,7 +15,7 @@ signup::signup(QWidget *parent) :
     dbsignup = QSqlDatabase::addDatabase("QMYSQL");
         dbsignup.setHostName("127.0.0.1");
         dbsignup.setUserName("root");
-        dbsignup.setPassword("0852");
+        dbsignup.setPassword("MySQL@2020");
         dbsignup.setDatabaseName("proj");
 }
 

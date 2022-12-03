@@ -25,7 +25,7 @@ BodyFAT::BodyFAT(QWidget *parent)
     dbbfc = QSqlDatabase::addDatabase("QMYSQL");
         dbbfc.setHostName("127.0.0.1");
         dbbfc.setUserName("root");
-        dbbfc.setPassword("0852");
+        dbbfc.setPassword("MySQL@2020");
         dbbfc.setDatabaseName("proj");
 }
 
